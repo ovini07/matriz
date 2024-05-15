@@ -1,0 +1,28 @@
+package worklpa;
+
+import java.util.Scanner;
+
+public class matriz01 {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int[][] m = new int[5][5];
+
+        int soma = 0;
+        for (int l = 0; l < 5; l++) {
+            for (int c = 0; c < 5; c++) {
+                int num = (int) (Math.random() * 50 + 1) * 2;
+                m[l][c] = num;
+                soma += num;
+            }
+        }
+        System.out.println("Matriz de números pares:");
+        for (int l = 0; l < 5; l++) {
+            for (int c = 0; c < 5; c++) {
+            	  System.out.print(m[l][c] + " \t" + "|");     
+            }
+            System.out.println();
+        }
+        System.out.println("Soma dos números pares na matriz: " + soma);
+    }
+}
